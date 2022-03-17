@@ -49,12 +49,17 @@ function main() {
     let total = 0;
     // Recorremos el vector patronesABuscar
 
-    for (i = 0; i < patronesABuscar.length; i++) {
+    let intentos = parseInt(prompt("Numero de busquedas: "));
 
+    for (i = 0; i < intentos; i++) {
+
+        alert("Intento " +(i+1) +"/" +intentos);
+        texto=prompt("Introduce un texto ", "000111101000ABCHO");
+        patronesABuscar[i] = prompt("Introduce un patrón " +i +":", "00");
 
         // Buscamos el patron
         let res = buscarPatron(texto, patronesABuscar[i]);
-        alert("El partron " + patronesABuscar[i] + " esta " + res + " veces");
+        alert("El patron " + patronesABuscar[i] + " esta " + res + " veces");
         // Acumulamos el total
         total += res;
     }
