@@ -55,7 +55,7 @@ function main() {
         alert("El partron " + patronesABuscar + " esta " + res + " veces");
         // Acumulamos el total
         total += res;
-    //}
+    //} 
 
     alert("El total de patrones encontrados es " + total);
 }
