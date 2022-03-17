@@ -40,21 +40,25 @@ function buscarPatron(texto, patron) {
 
 
 function main() {
-    
-    let texto = "000111101000ABCHO";
-    let patronesABuscar = ["00", "101", "ABC", "HO"];
+    let texto = prompt('Texto a introducir');
+    let patronesABuscar = prompt('Patrones a buscar');
+    let patron = [];
+
+    for (let index = 0; index < patronesABuscar; index++) {
+        patron[index] = prompt("Introducir patron");
+    }
     let i;
 
     // Total de coincidencias de todos los patrones
     let total = 0;
     // Recorremos el vector patronesABuscar
 
-    for (i = 0; i < patronesABuscar.length; i++) {
+    for (i = 0; i < patron.length; i++) {
 
 
         // Buscamos el patron
-        let res = buscarPatron(texto, patronesABuscar[i]);
-        alert("El partron " + patronesABuscar[i] + " esta " + res + " veces");
+        let res = buscarPatron(texto, patron[i]);
+        alert("El patron " + patron[i]+ " esta " + res + " veces");
         // Acumulamos el total
         total += res;
     }
