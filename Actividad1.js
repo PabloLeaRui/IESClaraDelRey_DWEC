@@ -41,22 +41,28 @@ function buscarPatron(texto, patron) {
 
 function main() {
     
-    let texto = "000111101000ABCHO";
-    let patronesABuscar = ["00", "101", "ABC", "HO"];
+//    let texto = "000111101000ABCHO";
+//    let patronesABuscar = ["00", "101", "ABC", "HO"];
+    let texto = null;
+    let patronesABuscar = null;
     let i;
 
     // Total de coincidencias de todos los patrones
     let total = 0;
     // Recorremos el vector patronesABuscar
 
-    for (i = 0; i < patronesABuscar.length; i++) {
+        texto = document.getElementsByName("text")[0].value;
+        patronesABuscar = document.getElementsByName("patron")[0].value;
+        alert(texto+" "+patronesABuscar);
 
+
+    for (i = 0; i < patronesABuscar.length; i++) {
 
         // Buscamos el patron
         let res = buscarPatron(texto, patronesABuscar[i]);
         alert("El partron " + patronesABuscar[i] + " esta " + res + " veces");
         // Acumulamos el total
-        total += res;
+        total += res;s
     }
 
     alert("El total de patrones encontrados es " + total);
