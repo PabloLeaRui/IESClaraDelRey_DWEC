@@ -39,6 +39,7 @@ function buscarPatron(texto, patron) {
 }
 
 
+
 function main() {
     
     //let texto = "000111101000ABCHO";
